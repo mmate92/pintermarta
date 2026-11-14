@@ -14,6 +14,13 @@ export const site = {
   },
 };
 
+// Shown in the hero of the home page.
+// TODO: replace this link with a proper list of awards (what and when).
+export const awards = {
+  label: 'Díjak, elismerések',
+  href: 'http://iti.btk.mta.hu/hu/intezet/dijak-elismeresek',
+};
+
 export interface NavItem {
   label: string;
   href: string;          // internal path, or a full URL for external links

@@ -194,7 +194,9 @@ Meghívó az MTA doktora címre benyújtott értekezés nyilvános vitájára, B
 
 ---
 
-### [Díjak, elismerések](http://iti.btk.mta.hu/hu/intezet/dijak-elismeresek)
+### A 2018. évi Faludi Ferenc Alkotói Díj átadása
+
+Meghívó díjátadó ünnepségre, Budapest, MTA BTK Irodalomtudományi Intézet, 2018. április 3.
 
 ![](../../assets/kepek/esemenyek/esemenyek-27.jpg)
 
