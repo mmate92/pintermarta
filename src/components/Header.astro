@@ -1,6 +1,7 @@
 ---
 import { site, navigation } from '../data/site';
 import { url } from '../lib/url';
+import Search from './Search.astro';
 
 const here = Astro.url.pathname.replace(/\/?$/, '/');
 const link = (href: string) => (href.startsWith('/') ? url(href) : href);
@@ -13,6 +14,7 @@ const isHere = (href: string) => href.startsWith('/') && url(href).replace(/\/?$
 </header>
 <div class="navbar">
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
+  <Search />
   <nav class="menu" id="menu" aria-label="Főmenü">
     <ul>
       {navigation.map((item) => (

@@ -1,0 +1,114 @@
+---
+// Search button (shown in the menu bar) and the panel with live results.
+// The index comes from src/pages/kereso-index.json.ts and is fetched the
+// first time the panel is opened.
+import { url } from '../lib/url';
+---
+<button class="search-open" type="button" aria-label="Keresés" title="Keresés">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
+<dialog class="search" data-index={url('/kereso-index.json')} aria-label="Keresés az oldalon">
+  <form method="dialog" class="search-bar">
+    <input type="search" placeholder="Keresés az oldalon…" aria-label="Keresőszó" autocomplete="off" spellcheck="false" />
+    <button type="submit" aria-label="Bezárás">×</button>
+  </form>
+  <p class="search-status" role="status"></p>
+  <ul class="search-results"></ul>
+</dialog>
+<script>
+  interface Entry { p: string; t: string; u: string; x: string; i?: string; nt: string; nx: string }
+
+  const dialog = document.querySelector<HTMLDialogElement>('dialog.search')!;
+  const input = dialog.querySelector('input')!;
+  const list = dialog.querySelector<HTMLUListElement>('.search-results')!;
+  const status = dialog.querySelector<HTMLElement>('.search-status')!;
+  const MAX = 40;
+  let index: Entry[] | null = null;
+
+  // lower-case and drop accents, keeping one character per character so that
+  // positions in the normalised text match the original ("Pintér" → "pinter")
+  const norm = (s: string) => {
+    let out = '';
+    for (let k = 0; k < s.length; k++) out += s[k].normalize('NFD').charAt(0).toLowerCase().charAt(0) || ' ';
+    return out;
+  };
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const reEsc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // a term matches at the beginning of a word: "konferencia" finds "konferencián"
+  const matcher = (terms: string[]) => new RegExp(`(?<![\\p{L}\\p{N}])(?:${terms.map(reEsc).join('|')})`, 'gu');
+
+  function mark(original: string, normalised: string, re: RegExp, from = 0, to = original.length) {
+    let html = '', at = from;
+    re.lastIndex = from;
+    for (let m; (m = re.exec(normalised)) && m.index < to; ) {
+      const end = Math.min(m.index + m[0].length, to);
+      html += esc(original.slice(at, m.index)) + '<mark>' + esc(original.slice(m.index, end)) + '</mark>';
+      at = end;
+      if (!m[0].length) re.lastIndex++;
+    }
+    return html + esc(original.slice(at, to));
+  }
+
+  function search() {
+    const terms = norm(input.value).split(/[^\p{L}\p{N}]+/u).filter((t) => t.length > 1);
+    if (!index || !terms.length) {
+      list.innerHTML = '';
+      status.textContent = index ? 'Írjon be legalább két betűt.' : 'Betöltés…';
+      return;
+    }
+    const each = terms.map((t) => matcher([t]));
+    const hits = [];
+    for (const [order, e] of index.entries()) {
+      let score = 0, ok = true;
+      for (const re of each) {
+        re.lastIndex = 0; const inTitle = re.test(e.nt);
+        re.lastIndex = 0; const inText = re.test(e.nx);
+        if (!inTitle && !inText) { ok = false; break; }
+        score += (inTitle ? 3 : 0) + (inText ? 1 : 0);
+      }
+      if (ok) hits.push({ e, score, order });
+    }
+    hits.sort((a, b) => b.score - a.score || a.order - b.order);
+    status.textContent = hits.length ? `${hits.length} találat${hits.length > MAX ? ` (az első ${MAX} látható)` : ''}` : 'Nincs találat.';
+    const all = matcher(terms);
+    list.innerHTML = hits.slice(0, MAX).map(({ e }) => {
+      all.lastIndex = 0;
+      const first = all.exec(e.nx)?.index ?? 0;
+      let from = Math.max(0, first - 70);
+      if (from > 0) from = e.x.indexOf(' ', from) + 1 || from;
+      const to = Math.min(e.x.length, from + 210);
+      const snippet = e.x ? (from > 0 ? '… ' : '') + mark(e.x, e.nx, all, from, to) + (to < e.x.length ? ' …' : '') : '';
+      return `<li><a href="${esc(e.u)}">${e.i ? `<img src="${esc(e.i)}" alt="" width="72" height="72" loading="lazy">` : ''}<span><small>${esc(e.p)}</small><strong>${mark(e.t, e.nt, all)}</strong>${snippet ? `<em>${snippet}</em>` : ''}</span></a></li>`;
+    }).join('');
+  }
+
+  async function open() {
+    dialog.showModal();
+    input.select();
+    if (!index) {
+      status.textContent = 'Betöltés…';
+      try {
+        const data: Entry[] = await (await fetch(dialog.dataset.index!)).json();
+        index = data.map((e) => ({ ...e, nt: norm(e.t), nx: norm(e.x) }));
+      } catch {
+        status.textContent = 'A keresés most nem érhető el.';
+        return;
+      }
+    }
+    search();
+  }
+
+  document.querySelectorAll('.search-open').forEach((b) => b.addEventListener('click', open));
+  input.addEventListener('input', search);
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog || (e.target as HTMLElement).closest('a')) dialog.close();
+  });
+  // arrow keys move through the results; Enter in the field opens the first one
+  dialog.addEventListener('keydown', (e) => {
+    const links = [...list.querySelectorAll('a')];
+    const at = links.indexOf(document.activeElement as HTMLAnchorElement);
+    if (e.key === 'ArrowDown') { e.preventDefault(); (links[at + 1] ?? links[0])?.focus(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); (at > 0 ? links[at - 1] : input).focus(); }
+    else if (e.key === 'Enter' && document.activeElement === input) { e.preventDefault(); links[0]?.click(); }
+  });
+</script>

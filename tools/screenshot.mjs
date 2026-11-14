@@ -1,5 +1,5 @@
 // Dev helper: screenshot a page after scrolling, using the installed Chrome.
-// Usage: node tools/screenshot.mjs <url> <out.png> <width> <height> [scrollY] [clickSelector]
+// Usage: node tools/screenshot.mjs <url> <out.png> <width> <height> [scrollY] [clickSelector | js:expression]
 import { spawn } from 'node:child_process';
 import { writeFileSync, mkdtempSync } from 'node:fs';
 import { join } from 'node:path';
@@ -25,7 +25,8 @@ try {
   await send('Page.navigate', { url });
   await sleep(2500);
   await send('Runtime.evaluate', { expression: `window.scrollTo({top:${+scrollY},behavior:'instant'})` });
-  if (click) await send('Runtime.evaluate', { expression: `document.querySelector(${JSON.stringify(click)}).click()` });
+  // the last argument is a selector to click, or 'js:<expression>' to run
+  if (click) await send('Runtime.evaluate', { expression: click.startsWith('js:') ? click.slice(3) : `document.querySelector(${JSON.stringify(click)}).click()`, awaitPromise: true });
   await sleep(1200);
   const shot = await send('Page.captureScreenshot', { format: 'png' });
   writeFileSync(out, Buffer.from(shot.data, 'base64'));

@@ -72,6 +72,19 @@
       top.innerHTML = bottom.innerHTML = pagerHtml(page);
     };
 
+    // Scroll to a linked heading. Images above it load late and push it down,
+    // so scroll again once the images on the shown page have loaded.
+    const goToHash = () => {
+      const target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+      if (!target) return;
+      target.scrollIntoView();
+      const pending = [...prose.querySelectorAll<HTMLImageElement>('.item:not([hidden]) img')].filter((img) => !img.complete);
+      if (!pending.length) return;
+      pending.forEach((img) => (img.loading = 'eager'));
+      const loaded = Promise.all(pending.map((img) => new Promise((done) => { img.onload = img.onerror = done; })));
+      Promise.race([loaded, new Promise((done) => setTimeout(done, 2500))]).then(() => target.scrollIntoView());
+    };
+
     for (const nav of [top, bottom]) {
       nav.addEventListener('click', (e) => {
         const a = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[data-page]');
@@ -83,7 +96,12 @@
       });
     }
     window.addEventListener('popstate', () => show(pageFromAddress()));
+    // a link to an item on this same page (e.g. from the search panel)
+    window.addEventListener('hashchange', () => {
+      show(pageFromAddress());
+      goToHash();
+    });
     show(pageFromAddress());
-    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+    goToHash();
   });
 </script>
