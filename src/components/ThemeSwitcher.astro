@@ -1,0 +1,30 @@
+---
+// TEMPORARY: lets us compare background styles on the live site. The choice
+// is remembered in the browser; ?stilus=bordo in the address also selects one.
+// When a style is chosen: set it as data-theme on <html> in Base.astro (or
+// move its colours to :root), then delete this component, its import, the
+// small script in Base.astro's <head> and the unused rules in global.css.
+const themes = [
+  { id: 'szinpad', label: 'Színpad', color: '#a3242f' },
+  { id: 'bordo', label: 'Bordó', color: '#7a1626' },
+  { id: 'gesztenye', label: 'Gesztenye', color: '#74401f' },
+  { id: 'szilva', label: 'Szilva', color: '#5a2046' },
+  { id: 'palackzold', label: 'Palackzöld', color: '#25473a' },
+  { id: 'ejkek', label: 'Éjkék', color: '#26385c' },
+  { id: 'antracit', label: 'Antracit', color: '#3c3835' },
+];
+---
+<div class="theme-switcher" role="group" aria-label="Stílus">
+  <span>Stílus:</span>
+  {themes.map((t) => <button type="button" data-theme-id={t.id}><i style={`background:${t.color}`}></i>{t.label}</button>)}
+</div>
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.theme-switcher button');
+  const mark = () => buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.themeId === document.documentElement.dataset.theme)));
+  buttons.forEach((b) => b.addEventListener('click', () => {
+    document.documentElement.dataset.theme = b.dataset.themeId!;
+    try { localStorage.setItem('stilus', b.dataset.themeId!); } catch {}
+    mark();
+  }));
+  mark();
+</script>

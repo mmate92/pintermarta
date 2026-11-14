@@ -22,6 +22,8 @@
   --valance: clamp(2.2rem, 5.5vw, 4.4rem);
   --page-width: 62rem;
   --backdrop: radial-gradient(ellipse 90% 70% at 50% 0%, #5b1820 0%, #2a0a0f 55%, #100405 100%) fixed;
+  --bg-base: #1a0608;
+  --menu-bg: linear-gradient(var(--red-dark), #2c070c);
   --side: clamp(0.75rem, 4vw, 2.5rem);
 }
 
@@ -39,7 +41,7 @@ body {
   min-height: 100vh;
   color: var(--ink);
   position: relative;
-  background: #1a0608 var(--backdrop);
+  background: var(--bg-base) var(--backdrop);
   font-family: var(--font-text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -60,12 +62,14 @@ a:hover { color: var(--red-dark); text-decoration-thickness: 2px; }
 .scene { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
 .scene > * { position: absolute; }
 
-.shell { max-width: var(--page-width); margin: 0 auto; padding: 0 var(--side) 3rem; }
+.shell { max-width: var(--page-width); margin: 0 auto; padding: var(--valance) var(--side) 3rem; }
 
 /* ------------------------------------------------------------------
    Header and menu
    ------------------------------------------------------------------ */
-.masthead { text-align: center; padding: calc(var(--valance) + 1.2rem) 0 0.6rem; color: var(--gold-light); }
+/* The header has the same backdrop as the menu bar below it, so header, menu
+   and page form one column of equal width (it starts below the top drape). */
+.masthead { text-align: center; padding: 1.2rem 0.5rem 0.6rem; color: var(--gold-light); background: var(--bg-base) var(--backdrop); }
 
 .masthead .name {
   display: inline-block;
@@ -97,7 +101,7 @@ a:hover { color: var(--red-dark); text-decoration-thickness: 2px; }
   position: sticky; top: 0; z-index: 30;
   padding: 0.35rem 0 0.4rem;
   text-align: center;
-  background: #2a0a0f var(--backdrop);
+  background: var(--bg-base) var(--backdrop);
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent) 1;
   box-shadow: 0 10px 18px -10px rgb(0 0 0 / 0.7);
@@ -126,7 +130,7 @@ a:hover { color: var(--red-dark); text-decoration-thickness: 2px; }
   position: absolute; z-index: 20; top: 100%; left: 50%;
   min-width: 13rem; padding: 0.4rem 0;
   transform: translateX(-50%);
-  background: linear-gradient(var(--red-dark), #2c070c);
+  background: var(--menu-bg);
   border: 1px solid var(--gold-dark);
   box-shadow: 0 12px 30px rgb(0 0 0 / 0.5);
   visibility: hidden; opacity: 0; transition: opacity 0.15s;
@@ -352,10 +356,32 @@ a:hover { color: var(--red-dark); text-decoration-thickness: 2px; }
    Other background drafts (and the script that drew these curtains) are
    kept in draft_backgrounds/.
    ------------------------------------------------------------------ */
-.scene .curtain { top: 0; bottom: 0; width: var(--curtain); background: url('../assets/hatter/fuggony-oldal.svg') no-repeat 0 0 / 100% 100%; filter: drop-shadow(10px 0 16px rgb(0 0 0 / 0.55)); }
+/* The curtain image keeps (close to) its natural proportions, 22:100 of the
+   window height; on narrow screens the element simply crops its inner part. */
+.scene .curtain { top: 0; bottom: 0; width: var(--curtain); background: url('../assets/hatter/fuggony-oldal.svg') no-repeat 0 0 / clamp(15vh, var(--curtain), 34vh) 100%; filter: drop-shadow(10px 0 16px rgb(0 0 0 / 0.55)); }
 .scene .curtain.left { left: 0; }
 .scene .curtain.right { right: 0; transform: scaleX(-1); }
 .scene .boards { left: 0; right: 0; bottom: 0; height: 16vh; background: repeating-linear-gradient(90deg, #4a2814 0 5.5rem, #3a1e0e 5.5rem 5.6rem, #55301a 5.6rem 11rem, #331a0c 11rem 11.1rem); mask-image: linear-gradient(transparent, #000 70%); -webkit-mask-image: linear-gradient(transparent, #000 70%); opacity: 0.8; }
 .valance { position: absolute; z-index: -1; top: 0; left: 0; right: 0; height: var(--valance); background: url('../assets/hatter/fuggony-felso.svg') repeat-x center top / auto 100%; filter: drop-shadow(0 8px 12px rgb(0 0 0 / 0.6)); }
 
-@media print { .scene, .valance, .navbar { display: none; } }
+/* ------------------------------------------------------------------
+   TEMPORARY style selector (src/components/ThemeSwitcher.astro).
+   'szinpad' is the theatre above; the others are plain backgrounds
+   without curtains. To finish: keep one, delete the rest and the switcher.
+   ------------------------------------------------------------------ */
+html:not([data-theme='szinpad']) .scene,
+html:not([data-theme='szinpad']) .valance { display: none; }
+html:not([data-theme='szinpad']) { --valance: 1rem; }
+html[data-theme='bordo'] { --backdrop: radial-gradient(ellipse 120% 80% at 50% 0%, #7a1626 0%, #4a0b14 50%, #26060b 100%) fixed; --bg-base: #3a0910; }
+html[data-theme='gesztenye'] { --backdrop: radial-gradient(ellipse 120% 80% at 50% 0%, #74401f 0%, #45230f 50%, #221007 100%) fixed; --bg-base: #3a1d0d; --menu-bg: linear-gradient(#55290f, #2a1307); }
+html[data-theme='szilva'] { --backdrop: radial-gradient(ellipse 120% 80% at 50% 0%, #5a2046 0%, #351029 50%, #1a0714 100%) fixed; --bg-base: #2c0d22; --menu-bg: linear-gradient(#4a1838, #230a1b); }
+html[data-theme='palackzold'] { --backdrop: radial-gradient(ellipse 120% 80% at 50% 0%, #25473a 0%, #142a22 50%, #091410 100%) fixed; --bg-base: #11241d; --menu-bg: linear-gradient(#1d3a2f, #0d1c16); }
+html[data-theme='ejkek'] { --backdrop: radial-gradient(ellipse 120% 80% at 50% 0%, #26385c 0%, #141f38 50%, #090e1b 100%) fixed; --bg-base: #111a30; --menu-bg: linear-gradient(#1e2d4d, #0c1324); }
+html[data-theme='antracit'] { --backdrop: radial-gradient(ellipse 120% 80% at 50% 0%, #3c3835 0%, #221f1d 50%, #0f0e0d 100%) fixed; --bg-base: #1c1a18; --menu-bg: linear-gradient(#34302d, #171514); }
+
+.theme-switcher { position: fixed; z-index: 50; right: 0.7rem; bottom: 0.7rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.25rem; max-width: calc(100vw - 1.4rem); padding: 0.35rem 0.6rem; font: 0.8rem var(--font-text); color: var(--gold-light); background: rgb(20 9 5 / 0.93); border: 1px solid var(--gold-dark); box-shadow: 0 6px 20px rgb(0 0 0 / 0.5); }
+.theme-switcher button { display: inline-flex; align-items: center; gap: 0.35rem; font: italic 500 1rem var(--font-display); color: var(--gold-light); background: none; border: 1px solid transparent; padding: 0.1rem 0.45rem; cursor: pointer; }
+.theme-switcher button i { width: 0.85rem; height: 0.85rem; border-radius: 50%; border: 1px solid var(--gold-dark); }
+.theme-switcher button[aria-pressed='true'] { border-color: var(--gold); background: rgb(201 162 39 / 0.18); }
+
+@media print { .scene, .valance, .navbar, .theme-switcher { display: none; } }
