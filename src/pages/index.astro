@@ -23,5 +23,5 @@ const { Content } = await render(news!);
     </div>
   </section>
   <h2 class="section-title">{news!.data.title}</h2>
-  <div class="prose"><Content /></div>
+  <div class="prose" data-per-page={news!.data.lapozas}><Content /></div>
 </Base>

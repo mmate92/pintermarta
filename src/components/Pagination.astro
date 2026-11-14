@@ -1,0 +1,89 @@
+---
+// Splits a long page into pages of N items, where an item is a block between
+// two --- dividers. Enabled per page with `lapozas: N` in the Markdown header.
+// The page number lives in the address (?oldal=3), so pages can be linked and
+// the browser's back button works. Without JavaScript the whole text is shown.
+---
+<script>
+  const PARAM = 'oldal';
+
+  document.querySelectorAll<HTMLElement>('.prose[data-per-page]').forEach((prose) => {
+    const perPage = Number(prose.dataset.perPage);
+    if (!perPage) return;
+
+    // group the content into items; each item after the first starts with its divider
+    const items: HTMLElement[] = [];
+    let item = document.createElement('section');
+    item.className = 'item';
+    for (const el of [...prose.children]) {
+      if (el.tagName === 'HR') {
+        if (item.children.length) items.push(item);
+        item = document.createElement('section');
+        item.className = 'item';
+      }
+      item.append(el);
+    }
+    if (item.children.length) items.push(item);
+    const pages = Math.ceil(items.length / perPage);
+    if (pages < 2) { prose.replaceChildren(...items); return; }
+    prose.replaceChildren(...items);
+
+    const top = document.createElement('nav'), bottom = document.createElement('nav');
+    for (const nav of [top, bottom]) { nav.className = 'pager'; nav.setAttribute('aria-label', 'Lapozás'); }
+    prose.before(top);
+    prose.after(bottom);
+
+    const href = (n: number) => {
+      const url = new URL(location.href);
+      url.hash = '';
+      if (n === 1) url.searchParams.delete(PARAM); else url.searchParams.set(PARAM, String(n));
+      return url.pathname + url.search;
+    };
+    const pagerHtml = (current: number) => {
+      const link = (n: number, label: string, extra = '') =>
+        `<a href="${href(n)}" data-page="${n}" ${extra}>${label}</a>`;
+      const shown = new Set([1, pages, current - 1, current, current + 1].filter((n) => n >= 1 && n <= pages));
+      if (current <= 3) [2, 3, 4].forEach((n) => n <= pages && shown.add(n));
+      if (current >= pages - 2) [pages - 1, pages - 2, pages - 3].forEach((n) => n >= 1 && shown.add(n));
+      let html = current > 1 ? link(current - 1, '‹', 'class="arrow" rel="prev" aria-label="Előző oldal"') : '<span class="arrow" aria-hidden="true">‹</span>';
+      let last = 0;
+      for (const n of [...shown].sort((a, b) => a - b)) {
+        if (n - last > 1) html += '<span class="gap" aria-hidden="true">…</span>';
+        html += link(n, String(n), n === current ? 'aria-current="page"' : `aria-label="${n}. oldal"`);
+        last = n;
+      }
+      html += current < pages ? link(current + 1, '›', 'class="arrow" rel="next" aria-label="Következő oldal"') : '<span class="arrow" aria-hidden="true">›</span>';
+      return html;
+    };
+
+    const pageFromAddress = () => {
+      // a link to a heading (#...) opens the page that contains it
+      const target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+      const index = target ? items.findIndex((i) => i.contains(target)) : -1;
+      if (index >= 0) return Math.floor(index / perPage) + 1;
+      const n = Number(new URL(location.href).searchParams.get(PARAM)) || 1;
+      return Math.min(Math.max(n, 1), pages);
+    };
+    const show = (page: number) => {
+      items.forEach((el, i) => {
+        el.hidden = Math.floor(i / perPage) + 1 !== page;
+        el.classList.toggle('first-shown', i === (page - 1) * perPage);
+      });
+      top.innerHTML = bottom.innerHTML = pagerHtml(page);
+    };
+
+    for (const nav of [top, bottom]) {
+      nav.addEventListener('click', (e) => {
+        const a = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[data-page]');
+        if (!a) return;
+        e.preventDefault();
+        history.pushState(null, '', a.getAttribute('href')!);
+        show(Number(a.dataset.page));
+        top.scrollIntoView({ block: 'start' });
+      });
+    }
+    window.addEventListener('popstate', () => show(pageFromAddress()));
+    show(pageFromAddress());
+    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+  });
+</script>

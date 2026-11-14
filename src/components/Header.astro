@@ -10,6 +10,8 @@ const isHere = (href: string) => href.startsWith('/') && url(href).replace(/\/?$
   <a class="name" href={url('/')}>{site.name}</a>
   <p class="role">{site.role}</p>
   <div class="ornament">❦</div>
+</header>
+<div class="navbar">
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
   <nav class="menu" id="menu" aria-label="Főmenü">
     <ul>
@@ -27,12 +29,16 @@ const isHere = (href: string) => href.startsWith('/') && url(href).replace(/\/?$
       ))}
     </ul>
   </nav>
-</header>
+</div>
 <script>
   const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
   const menu = document.getElementById('menu');
   toggle?.addEventListener('click', () => {
     const open = menu!.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(open));
+  });
+  // close the mobile menu when a link in it is followed
+  menu?.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('a')) menu.classList.remove('open');
   });
 </script>

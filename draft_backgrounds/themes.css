@@ -1,0 +1,44 @@
+/* Saved from src/styles/global.css (first draft). */
+/* ------------------------------------------------------------------
+   THEMES — three sketches of the background. The active one is set by
+   data-theme on <html>; the default lives in src/layouts/Base.astro.
+   ------------------------------------------------------------------ */
+
+/* 1. Színpad: theatre stage with side curtains and a top drape */
+html[data-theme='szinpad'] body { background: radial-gradient(ellipse 90% 70% at 50% 0%, #5b1820 0%, #2a0a0f 55%, #100405 100%) fixed; }
+html[data-theme='szinpad'] .scene .curtain,
+html[data-theme='szinpad'] .scene .valance,
+html[data-theme='szinpad'] .scene .boards { display: block; }
+.scene .curtain { top: 0; bottom: 0; width: clamp(3.5rem, 15vw, 15rem); background: url('../assets/hatter/fuggony-oldal.svg') no-repeat 0 0 / 100% 100%; filter: drop-shadow(8px 0 14px rgb(0 0 0 / 0.5)); }
+.scene .curtain.left { left: 0; }
+.scene .curtain.right { right: 0; transform: scaleX(-1); }
+.scene .valance { top: 0; left: 0; right: 0; height: clamp(2.2rem, 5.5vw, 4.4rem); background: url('../assets/hatter/fuggony-felso.svg') repeat-x center top / auto 100%; filter: drop-shadow(0 6px 10px rgb(0 0 0 / 0.55)); }
+.scene .boards { left: 0; right: 0; bottom: 0; height: 16vh; background: repeating-linear-gradient(90deg, #4a2814 0 5.5rem, #3a1e0e 5.5rem 5.6rem, #55301a 5.6rem 11rem, #331a0c 11rem 11.1rem); mask-image: linear-gradient(transparent, #000 70%); -webkit-mask-image: linear-gradient(transparent, #000 70%); opacity: 0.8; }
+html[data-theme='szinpad'] .masthead { padding-top: clamp(3.6rem, 8vw, 6rem); }
+html[data-theme='szinpad'] { --page-width: 58rem; }
+
+/* 2. Könyvespolc: a wall of book spines */
+html[data-theme='konyvespolc'] .scene .shelves,
+html[data-theme='konyvespolc'] .scene .dim { display: block; }
+.scene .shelves { inset: 0; background: #170c07 url('../assets/hatter/konyvespolc.svg') repeat center top / 46rem auto; }
+.scene .dim { inset: 0; background: radial-gradient(ellipse 75% 100% at 50% 40%, rgb(20 9 5 / 0.82) 0%, rgb(20 9 5 / 0.62) 55%, rgb(20 9 5 / 0.2) 100%); }
+html[data-theme='konyvespolc'] .masthead { margin: 0 calc(-1 * var(--side)) 1.5rem; padding: 1.8rem 1rem 1.2rem; background: linear-gradient(#6b3d22, #3d2010 85%, #2a150a); border-bottom: 2px solid var(--gold-dark); box-shadow: 0 10px 30px rgb(0 0 0 / 0.6); }
+
+/* 3. Könyvtár: the interior of a library hall */
+html[data-theme='konyvtar'] .scene .hall,
+html[data-theme='konyvtar'] .scene .dusk { display: block; }
+.scene .hall { inset: 0; background: #1a0c07 url('../assets/hatter/konyvtar.svg') no-repeat center 30% / cover; }
+.scene .dusk { inset: 0; background: linear-gradient(rgb(20 9 5 / 0.35) 0%, rgb(20 9 5 / 0.15) 30%, rgb(20 9 5 / 0.6) 100%); }
+html[data-theme='konyvtar'] .masthead { padding: 3.2rem 0 2.2rem; }
+html[data-theme='konyvtar'] .masthead .name,
+html[data-theme='konyvtar'] .masthead .role,
+html[data-theme='konyvtar'] .menu a { text-shadow: 0 1px 3px #000, 0 0 16px rgb(0 0 0 / 0.9); }
+html[data-theme='konyvtar'] .masthead .role { color: var(--gold-light); }
+
+/* ------------------------------------------------------------------
+   Temporary sketch switcher (remove with src/components/ThemeSwitcher.astro)
+   ------------------------------------------------------------------ */
+.theme-switcher { position: fixed; z-index: 50; right: 0.8rem; bottom: 0.8rem; display: flex; align-items: center; gap: 0.3rem; padding: 0.4rem 0.6rem; font: 0.8rem var(--font-text); color: var(--gold-light); background: rgb(20 9 5 / 0.92); border: 1px solid var(--gold-dark); box-shadow: 0 6px 20px rgb(0 0 0 / 0.5); }
+.theme-switcher button { font: italic 500 1rem var(--font-display); color: var(--gold-light); background: none; border: 1px solid transparent; padding: 0.1rem 0.55rem; cursor: pointer; }
+.theme-switcher button[aria-pressed='true'] { border-color: var(--gold); background: rgb(201 162 39 / 0.18); }
+@media print { .theme-switcher, .scene { display: none; } }

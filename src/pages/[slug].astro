@@ -15,5 +15,5 @@ const { Content } = await render(page);
 ---
 <Base title={page.data.title}>
   <h1 class="page-title">{page.data.title}</h1>
-  <div class="prose"><Content /></div>
+  <div class:list={["prose", page.data.stilus]} data-per-page={page.data.lapozas}><Content /></div>
 </Base>

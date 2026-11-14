@@ -2,7 +2,7 @@
 // Run from the project root:  node tools/make-backgrounds.mjs
 import { mkdirSync, writeFileSync } from 'node:fs';
 
-const OUT = new URL('../src/assets/hatter/', import.meta.url);
+const OUT = new URL('./generated/', import.meta.url);
 mkdirSync(OUT, { recursive: true });
 
 function rng(seed) {
