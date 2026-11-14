@@ -1,0 +1,19 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+// One page per Markdown file in src/content/oldalak, except the two that
+// have their own page file (the home page news and the gallery).
+export async function getStaticPaths() {
+  const pages = await getCollection('oldalak');
+  return pages
+    .filter((p) => !['hirek', 'galeria'].includes(p.id))
+    .map((page) => ({ params: { slug: page.id }, props: { page } }));
+}
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+<Base title={page.data.title}>
+  <h1 class="page-title">{page.data.title}</h1>
+  <div class="prose"><Content /></div>
+</Base>

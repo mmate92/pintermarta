@@ -1,0 +1,24 @@
+---
+// TEMPORARY: lets us compare the three background sketches on the live site.
+// Once one is chosen, set DEFAULT_THEME in src/layouts/Base.astro and delete
+// this component (and its import and the small script in Base.astro's <head>).
+const themes = [
+  { id: 'szinpad', label: 'Színpad' },
+  { id: 'konyvespolc', label: 'Könyvespolc' },
+  { id: 'konyvtar', label: 'Könyvtár' },
+];
+---
+<div class="theme-switcher" role="group" aria-label="Háttérvázlat">
+  <span>Vázlat:</span>
+  {themes.map((t) => <button type="button" data-theme-id={t.id}>{t.label}</button>)}
+</div>
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.theme-switcher button');
+  const mark = () => buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.themeId === document.documentElement.dataset.theme)));
+  buttons.forEach((b) => b.addEventListener('click', () => {
+    document.documentElement.dataset.theme = b.dataset.themeId!;
+    try { localStorage.setItem('vazlat', b.dataset.themeId!); } catch {}
+    mark();
+  }));
+  mark();
+</script>

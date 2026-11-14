@@ -1,0 +1,25 @@
+---
+// Click an image in the text or in the gallery to see it enlarged.
+---
+<dialog class="lightbox">
+  <button type="button" aria-label="Bezárás">×</button>
+  <img alt="" />
+</dialog>
+<script>
+  const box = document.querySelector<HTMLDialogElement>('.lightbox')!;
+  const big = box.querySelector('img')!;
+  const show = (src: string, alt: string) => { big.src = src; big.alt = alt; box.showModal(); };
+  document.addEventListener('click', (e) => {
+    const el = e.target as HTMLElement;
+    const link = el.closest<HTMLAnchorElement>('.gallery a');
+    if (link) { e.preventDefault(); show(link.href, link.querySelector('img')?.alt ?? ''); }
+    else if (el instanceof HTMLImageElement && el.closest('.prose')) show(el.currentSrc || el.src, el.alt);
+    else if (el === box || el.closest('.lightbox button')) box.close();
+  });
+  // wide tables scroll sideways on small screens
+  document.querySelectorAll('.prose table').forEach((t) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'table-scroll';
+    t.replaceWith(wrap); wrap.append(t);
+  });
+</script>

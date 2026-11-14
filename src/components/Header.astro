@@ -1,0 +1,38 @@
+---
+import { site, navigation } from '../data/site';
+import { url } from '../lib/url';
+
+const here = Astro.url.pathname.replace(/\/?$/, '/');
+const link = (href: string) => (href.startsWith('/') ? url(href) : href);
+const isHere = (href: string) => href.startsWith('/') && url(href).replace(/\/?$/, '/') === here;
+---
+<header class="masthead">
+  <a class="name" href={url('/')}>{site.name}</a>
+  <p class="role">{site.role}</p>
+  <div class="ornament">❦</div>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
+  <nav class="menu" id="menu" aria-label="Főmenü">
+    <ul>
+      {navigation.map((item) => (
+        <li class={item.children?.some((c) => isHere(c.href)) ? 'current' : undefined}>
+          <a href={link(item.href)} aria-current={!item.children && isHere(item.href) ? 'page' : undefined}>{item.label}</a>
+          {item.children && (
+            <ul class="sub">
+              {item.children.map((child) => (
+                <li><a href={link(child.href)} aria-current={isHere(child.href) ? 'page' : undefined}>{child.label}</a></li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const menu = document.getElementById('menu');
+  toggle?.addEventListener('click', () => {
+    const open = menu!.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+</script>

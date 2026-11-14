@@ -1,0 +1,11 @@
+---
+import { site, footerLinks } from '../data/site';
+---
+<footer class="footer">
+  <ul>
+    {footerLinks.map((l) => <li><a href={l.href} rel="noopener">{l.label}</a></li>)}
+  </ul>
+  <p>{site.contact.institution}</p>
+  <p><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></p>
+  <p>© {new Date().getFullYear()} {site.name}</p>
+</footer>

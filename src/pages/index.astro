@@ -1,0 +1,27 @@
+---
+import { getEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+import portrait from '../assets/portre.jpg';
+
+// The news shown on the home page is src/content/oldalak/hirek.md
+const news = await getEntry('oldalak', 'hirek');
+const { Content } = await render(news!);
+---
+<Base>
+  <section class="hero">
+    <Image class="portrait" src={portrait} alt={site.name} width={520} loading="eager" />
+    <div>
+      <h1>{site.greeting}</h1>
+      <dl>
+        <dt>Munkahely</dt><dd>{site.contact.institution}</dd>
+        <dt>Iroda</dt><dd>{site.contact.address}</dd>
+        <dt>Telefon</dt><dd>{site.contact.phone}</dd>
+        <dt>E-mail</dt><dd><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></dd>
+      </dl>
+    </div>
+  </section>
+  <h2 class="section-title">{news!.data.title}</h2>
+  <div class="prose"><Content /></div>
+</Base>

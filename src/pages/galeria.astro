@@ -1,0 +1,30 @@
+---
+import { getEntry, render } from 'astro:content';
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Base from '../layouts/Base.astro';
+
+// Every image in src/assets/galeria appears here, in file-name order.
+// To add a photo, just drop it into that folder.
+const files = import.meta.glob<{ default: ImageMetadata }>('../assets/galeria/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG}', { eager: true });
+const photos = await Promise.all(
+  Object.keys(files).sort().map(async (path) => {
+    const src = files[path].default;
+    return {
+      thumb: await getImage({ src, width: 480, height: 360, fit: 'cover' }),
+      full: await getImage({ src, width: Math.min(1600, src.width) }),
+    };
+  }),
+);
+const page = await getEntry('oldalak', 'galeria');
+const { Content } = await render(page!);
+---
+<Base title={page!.data.title}>
+  <h1 class="page-title">{page!.data.title}</h1>
+  <div class="prose"><Content /></div>
+  <div class="gallery">
+    {photos.map((p) => (
+      <a href={p.full.src}><img src={p.thumb.src} width="480" height="360" alt="Galéria kép" loading="lazy" decoding="async" /></a>
+    ))}
+  </div>
+</Base>
