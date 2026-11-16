@@ -168,7 +168,7 @@ Előadás "A fordító mint kultúra- és irodalomközvetítő" című nemzetkö
 
 ### Megjelent a legújabb könyvem a L'Harmattan kiadónál
 
-2019. június 16-án könyvheti dedikálás a kiadó 122-es pavilonjában, Budapesten a Duna-korzón, 11 és 12 óra között.
+2019\. június 16-án könyvheti dedikálás a kiadó 122-es pavilonjában, Budapesten a Duna-korzón, 11 és 12 óra között.
 
 ![A kötet borítója](../../assets/kepek/esemenyek/esemenyek-22.jpg)
 
@@ -176,7 +176,7 @@ Előadás "A fordító mint kultúra- és irodalomközvetítő" című nemzetkö
 
 ### Előadás a X. Egri drámatörténeti konferencián
 
-2018. szeptember 7-én előadás az Elmélet és gyakorlat a 17-19. század színpadán című nemzetközi konferencián Les types du drame historique dans la littérature ancienne hongroise címmel
+2018\. szeptember 7-én előadás az Elmélet és gyakorlat a 17-19. század színpadán című nemzetközi konferencián Les types du drame historique dans la littérature ancienne hongroise címmel
 
 ![](../../assets/kepek/esemenyek/esemenyek-23.jpg)
 
@@ -206,7 +206,7 @@ Meghívó díjátadó ünnepségre, Budapest, MTA BTK Irodalomtudományi Intéze
 
 ### Könyvbemutató a Párizsi Magyar Intézetben
 
-2017. szeptember 18-án volt a Balassi Intézet Párizsi Magyar Intézetében Pintér Márta Zsuzsanna *Le théatre dans le Royaume de Hongrie aux XVIIe et XVIIIe siècles* című francia nyelvű kötetének bemutatója.
+2017\. szeptember 18-án volt a Balassi Intézet Párizsi Magyar Intézetében Pintér Márta Zsuzsanna *Le théatre dans le Royaume de Hongrie aux XVIIe et XVIIIe siècles* című francia nyelvű kötetének bemutatója.
 
 A könyvet Jean-Marie Valentin, a téma nemzetközileg elismert szakértője, a Sorbonne IV. professzora, és Kaló Krisztina főiskolai docens, a kötet fordítója mutatta be francia kutatók és érdeklődők előtt.
 
@@ -366,7 +366,7 @@ A kötetben megjelent tanulmányom: **Ünnep és teatralitás. Esterházy Pál n
 
 ### Meghívó
 
-2015. május 18-án, hétfőn délután 5 órakor a Petőfi Irodalmi Múzeum Lotz termében Ratzky Rita: Halhatlan a lélek”, Tanulmányok, cikkek, kritikák a XVIII—XIX. század magyar irodalmáról című könyve kerül bemutatásra. A mű a Napkút Kiadónál jelent meg. Bemutatja Szörényi László irodalomtörténész, egyetemi professzor és Pintér Márta Zsuzsanna irodalomtörténész, habil. egyetemi docens.
+2015\. május 18-án, hétfőn délután 5 órakor a Petőfi Irodalmi Múzeum Lotz termében Ratzky Rita: Halhatlan a lélek”, Tanulmányok, cikkek, kritikák a XVIII—XIX. század magyar irodalmáról című könyve kerül bemutatásra. A mű a Napkút Kiadónál jelent meg. Bemutatja Szörényi László irodalomtörténész, egyetemi professzor és Pintér Márta Zsuzsanna irodalomtörténész, habil. egyetemi docens.
 
 A programban megzenésített Petőfi-versek hangzanak el Kobzos Kiss Tamás muzsikustól, zeneszerzőtől, és Petőfi-költeményeket hallhatunk Lőte Attila színművész előadásában. A műsort Havas Judit előadóművész moderálja, aki egy Szendrey Júlia beszédrészletet mond el.
 
@@ -376,7 +376,7 @@ A programban megzenésített Petőfi-versek hangzanak el Kobzos Kiss Tamás muzs
 
 ### Békéscsabai megnyitó
 
-2015. május 9-én nyílt meg a Békéscsabai Jókai Színházban a *Kelemen László és az első magyar színtársulat* című kiállítás.
+2015\. május 9-én nyílt meg a Békéscsabai Jókai Színházban a *Kelemen László és az első magyar színtársulat* című kiállítás.
 
 A tablók június 11-ig lesznek láthatóak a színház előcsarnokában.
 
@@ -441,7 +441,7 @@ Tudja mikor nyílt meg az első színház Egerben? 1692-ben, amikor a város jez
 
 ### Előadás a Szerzetesrendek a veszprémi egyházmegyében című konferencián
 
-2014. augusztus 28-án előadás a Szerzetesrendek a veszprémi egyházmegyében című konferencián.
+2014\. augusztus 28-án előadás a Szerzetesrendek a veszprémi egyházmegyében című konferencián.
 
 *A konferencia programfüzete*
 
@@ -449,7 +449,7 @@ Tudja mikor nyílt meg az első színház Egerben? 1692-ben, amikor a város jez
 
 ### Előadás Leeds-ben a Nemzetközi Medievisztikai Kongresszuson
 
-2014. július 7-én előadás Leeds-ben a Nemzetközi Medievisztikai Kongresszuson International Congress on the Study of the European Middle Ages: c. 300-1500.
+2014\. július 7-én előadás Leeds-ben a Nemzetközi Medievisztikai Kongresszuson International Congress on the Study of the European Middle Ages: c. 300-1500.
 
 **Az előadás címe:** *The Reception of Hroswitha of Gandersheim in Hungary.*
 
@@ -462,7 +462,7 @@ Università degli Studi di Napoli “L’Orientale”
 10-11-12 giugno 2014  
 Palazzo Du Mesnil, Via Chiatamone 61/62
 
-2014. június 10-én előadást tartottam a Nápolyi Egyetemen a magyar kulturális napok keretében *Il motivo del fuoco nel dramma storico Niklas Zrínyi di Friedrich Werthes (Buda, 1793)* és *Spettacoli in onore della famiglia Rákóczi (secc. XVII-XVIII)* címmel.
+2014\. június 10-én előadást tartottam a Nápolyi Egyetemen a magyar kulturális napok keretében *Il motivo del fuoco nel dramma storico Niklas Zrínyi di Friedrich Werthes (Buda, 1793)* és *Spettacoli in onore della famiglia Rákóczi (secc. XVII-XVIII)* címmel.
 
 A rendezvényt Amedeo di Francesco (docente di Lingua e letteratura ungherese) szervezte, a teljes program itt olvasható.
 
@@ -492,7 +492,7 @@ A kötet szerkesztése mellett két tanulmányom szerepel a kötetben: *Három d
 
 ### Színlapok a 17-18. századból
 
-2014. május 8-án du fél 5-kor nyílik meg a Főegyházmegyei Könyvtár dísztermében a *Színlapok a 17-18. századból* című kiállításom. A tárlat a magyar színházi kultúra történetének egy szinte ismeretlen területét, az iskola színjátszás világát idézi fel a látogatóknak. A 16-18. században a színház szinte mindenkinek elérhető, legelterjedtebb formája a középiskolákban folyó színjátszás volt. Az előadásokhoz kéziratos vagy nyomtatott színlapot is készítettek. A színlap funkciója más volt, mint a 20. században, az előadás címén és időpontján kívül közölték a mecénás nevét, a szereposztást, a darab rövid tartalmát és jeleneteit is. Így a 4-16 oldalas kis nyomtatványok meghívóként szolgáltak, segítették a nézőket az előadás megértésében és megörökítették a szereplők névsorát is. Éppen ezért a színlapok nemcsak a dráma és a színháztörténet, hanem az iskolatörténet, sőt (a diáknévsorok miatt) a családtörténet szempontjából is nagyon érdekesek. A majdnem 10 ezer magyarországi iskolai színielőadás sokszínű repertoárját, fejlett színpadtechnikáját elsősorban a jezsuita, a piarista, és a pálos színlapok segítségével mutatja be a kiállítás, de a tárlókban helyet kapott sok egyéb, a Főegyházmegyei Könyvtárban illetve a Főegyházmegyei Levéltárban őrzött dokumentum (iskolai jegyzet, történeti munka, drámakézirat stb.) is.
+2014\. május 8-án du fél 5-kor nyílik meg a Főegyházmegyei Könyvtár dísztermében a *Színlapok a 17-18. századból* című kiállításom. A tárlat a magyar színházi kultúra történetének egy szinte ismeretlen területét, az iskola színjátszás világát idézi fel a látogatóknak. A 16-18. században a színház szinte mindenkinek elérhető, legelterjedtebb formája a középiskolákban folyó színjátszás volt. Az előadásokhoz kéziratos vagy nyomtatott színlapot is készítettek. A színlap funkciója más volt, mint a 20. században, az előadás címén és időpontján kívül közölték a mecénás nevét, a szereposztást, a darab rövid tartalmát és jeleneteit is. Így a 4-16 oldalas kis nyomtatványok meghívóként szolgáltak, segítették a nézőket az előadás megértésében és megörökítették a szereplők névsorát is. Éppen ezért a színlapok nemcsak a dráma és a színháztörténet, hanem az iskolatörténet, sőt (a diáknévsorok miatt) a családtörténet szempontjából is nagyon érdekesek. A majdnem 10 ezer magyarországi iskolai színielőadás sokszínű repertoárját, fejlett színpadtechnikáját elsősorban a jezsuita, a piarista, és a pálos színlapok segítségével mutatja be a kiállítás, de a tárlókban helyet kapott sok egyéb, a Főegyházmegyei Könyvtárban illetve a Főegyházmegyei Levéltárban őrzött dokumentum (iskolai jegyzet, történeti munka, drámakézirat stb.) is.
 
 Mindenkit szeretettel várok a rendezvényre és a kiállításra, ami szeptember végéig lesz látható.
 
@@ -508,7 +508,7 @@ A kiállítás megnyitóján készített film [itt](http://localhost/pinter/?pag
 
 ### Editoria e traduzione: focus sulle lingue di “minore diffusione”
 
-2014. január 16-17.-én részt vettem a Padovai Egyetem által szervezett **Editoria e traduzione: focus sulle lingue di “minore diffusione”** című konferencián, ahol *“Editio princeps” . L’edizione critica dei drammi manoscritti ungheresi del Settecento* címmel tartottam előadást.
+2014\. január 16-17.-én részt vettem a Padovai Egyetem által szervezett **Editoria e traduzione: focus sulle lingue di “minore diffusione”** című konferencián, ahol *“Editio princeps” . L’edizione critica dei drammi manoscritti ungheresi del Settecento* címmel tartottam előadást.
 
 *Padovai Egyetem*
 
@@ -549,13 +549,13 @@ Az előadás a Nemzeti Színház dokumentumai , a korabeli színházi sajtó és
 
 ### Tudományos előadás a Kolozsvári Akadémiai Bizottság és az Erdélyi Múzeum Egyesület szervezésében
 
-2013. szeptember 6-án: *Egy rejtőzködő 18. századi költő: Mártonfi József erdélyi püspök* címmel Kolozsvárott.
+2013\. szeptember 6-án: *Egy rejtőzködő 18. századi költő: Mártonfi József erdélyi püspök* címmel Kolozsvárott.
 
 ---
 
 ### Vulkán Vera Tünde disszertációjának nyilvános vitája
 
-2013. szeptember 5-én került sor Vulkán Vera Tünde disszertációjának nyilvános vitájára a Babes-Bolyai Egyetem Hungarológiai doktoriskolájában, Kolozsvárott.
+2013\. szeptember 5-én került sor Vulkán Vera Tünde disszertációjának nyilvános vitájára a Babes-Bolyai Egyetem Hungarológiai doktoriskolájában, Kolozsvárott.
 
 **A disszertáció címe:** *Mártonfi József főigazgatói és cenzori működése* (témavezető: Egyed Emese). Részvétel a bizottságban opponensként.
 
@@ -563,7 +563,7 @@ Az előadás a Nemzeti Színház dokumentumai , a korabeli színházi sajtó és
 
 ### Ünnep és teatralitás, Esterházy Pál nádorrá választása
 
-2013. május 25. **Ünnep és teatralitás, Esterházy Pál nádorrá választása** címmel előadás a Magyar Tudományos Akadémia Bölcsészettudományi Kutatóközpontja által szervezett *Irodalom, művészet, barokk reprezentáció Esterházy Pál udvarában* című tudományos konferencián, Kőszegen.
+2013\. május 25. **Ünnep és teatralitás, Esterházy Pál nádorrá választása** címmel előadás a Magyar Tudományos Akadémia Bölcsészettudományi Kutatóközpontja által szervezett *Irodalom, művészet, barokk reprezentáció Esterházy Pál udvarában* című tudományos konferencián, Kőszegen.
 
 Az előadás az 1681-es soproni országgyűlés reprezentációs eseményeit ( bevonulás, fogadás, ünnepi megnyitó, koronázás) mutatta be a korabeli források alapján, kiegészítve ezeket az elemeket a soproni jezsuita kollégiumnak az országgyűlés időszakában ( 1681 május – 1681. december) tartott három színielőadásának elemzésével. Központjában az Esterházy Pál nádorrá választását köszöntő bemutató állt, amelyhez nyomtatott színlap is készült Bécsben. Az előadás Szent Pancratiusról szólt, de a mártírdrámával párhuzamosan zajló allegorikus színjáték és az előadás keretjátéka is az iskola mecénását, Esterházyt köszöntötte. Az előadásban Esterházy Pál három fia is részt vett, a szcenikai megjelenítésben pedig szintén az Esterházy családhoz köthető szimbólumok (pl. a családi címer griffmadara), illetve a hozzá kötődő, emblémagyűjteményekben nem szereplő figurák (pl. a Máriatisztelet) tűntek fel. Az országgyűlés vallásügyi kérdésekkel foglalkozó időszakában ez a téma is hordozott politikai aktualitást, az előadás Esterházyt, mint a katolikus hit védelmezőjét ünnepelte. A jezsuita kollégium másik előadásának is volt hasonló politikai üzenete: a Sopronnak városi polgárjogot adó királynak, IV. Lászlónak a pogány kunokkal való „barátságáról” és bukásáról szóló játék arra figyelmeztetett, hogy a protestánsokkal való alkudozás, a túlzott engedmények a király(ság) bukásához vezethetnek. Az adatok vizsgálata azt mutatja, hogy az országgyűlés idején a teátrális elemek összefüggő rendszert alkottak, s ebbe a rendszerbe fontos elemként épültek be az iskolai előadások is, amelyek konkrét módon reflektáltak a politikai történésekre. Az a szellemiség, amelyet a soproni jezsuita kollégium színházi gyakorlata képviselt, nagyon is megfelelt Esterházy Pál habitusának, azoknak a teátrális gesztusoknak, amelyekkel önmagát meghatározta s amelyekkel – barokk közéleti szereplőként – megjelent a világ színpadán.
 
@@ -571,7 +571,7 @@ Az előadás az 1681-es soproni országgyűlés reprezentációs eseményeit ( b
 
 ### Többnyelvűség, nyelvi identitás a 16-18. századi drámairodalomban
 
-2013. május 22. **Többnyelvűség, nyelvi identitás a 16-18. századi drámairodalomban** címmel előadás az *Az identitás metamorfózisa irodalomban és nyelvben - Metamorfóza identity v literatúre a v jazyku,* című nemzetközi tudományos konferencián. Banská Bystrica, Univerzita Mateja Bela, Fakulta Humanitnych Vied, Katedra Hungaristiky - Besztercebánya, Bél Mátyás Egyetem, Humán Tudományok Kara, Hungarisztika tanszék
+2013\. május 22. **Többnyelvűség, nyelvi identitás a 16-18. századi drámairodalomban** címmel előadás az *Az identitás metamorfózisa irodalomban és nyelvben - Metamorfóza identity v literatúre a v jazyku,* című nemzetközi tudományos konferencián. Banská Bystrica, Univerzita Mateja Bela, Fakulta Humanitnych Vied, Katedra Hungaristiky - Besztercebánya, Bél Mátyás Egyetem, Humán Tudományok Kara, Hungarisztika tanszék
 
 A magyarországi iskolai színjátszás jelentősége Kelet Európában jóval nagyobb volt, mint azokban az országokban, ahol létezett a hivatásos színjátszás. A Régi Magyar Drámakutató csoport az elmúlt 30 évben több mint 7000 színjátszási adatot, és 180 magyar nyelvű drámaszöveget publikált. Ebben az adatbázisban különösen érdekesek a színielőadások nyelvére utaló adatok. A latin nyelvű drámaelőadások mellett már a 17. század elején találunk anyanyelvű előadásokat, s azokon a vidékeken, ahol a közönség összetétele ezt megkívánja, 2-3-4 nyelvű nyomtatott színlap (periocha, argumentum, drámaprogram) segíti a nézői befogadást, az előadás megértését. Különösen érdekes pl. Pest, ahol a piarista gimnáziumban magyar, latin, szlovák és német nyelvűek a színlapok az 1710-1730 közötti időszakban. Sok esetben a színlapok mellett maguk a szövegek is kétnyelvűek, jónéhány magyar-latin, német-latin szöveg maradt ránk. Vannak városok, ahol felváltva tartanak német, magyar és latin nyelvű előadásokat (pl. Sopronban). Emellett megjelenik a többnyelvűség a dramaturgia részeként is ( pl. egy szegedi 1778-as előadásban), s gyakori az is, hogy ( pl. a protestáns színjátékokban) a szereplők jellemzésének legfontosabb eszköze éppen a nyelvi identitásuk, a többi szereplőtől különböző beszédmódjuk lesz. Előadásomban ezeket a jelenségeket mutattam be a színjátszási adatok és a drámaszövegek alapján.
 
@@ -587,7 +587,7 @@ A hírt küldte: Magyar Irodalomtudományi Tanszék
 
 ### Szín-Játék-Költészet. Tanulmányok a nyolcvanéves Kilián István tiszteletére
 
-2013. április 12-én a Petőfi Irodalmi Múzeumban került sor **Kilián István** köszöntésére, és a tanár úr 80. születésnapjára készült kötet (**Szín-Játék-Költészet. Tanulmányok a nyolcvanéves Kilián István tiszteletére,** szerkesztői: Czibula Katalin, Demeter Júlia és Pintér Márta Zsuzsanna) bemutatására.
+2013\. április 12-én a Petőfi Irodalmi Múzeumban került sor **Kilián István** köszöntésére, és a tanár úr 80. születésnapjára készült kötet (**Szín-Játék-Költészet. Tanulmányok a nyolcvanéves Kilián István tiszteletére,** szerkesztői: Czibula Katalin, Demeter Júlia és Pintér Márta Zsuzsanna) bemutatására.
 
 Az eseményen beszédet mondott Szörényi László és Kecskeméti Gábor, ( az MTA Irodalomtudományi Intézetének volt és jelenlegi igazgatója) zenélt Csörsz Rumen István, a Musica Historica együttes vezetője, és bemutatásra került egy minorita iskolai színjáték is, **Borka asszony és György deák** címmel. Az előadást Medgyesy S. Norbert rendezte, Borka asszonyt Farkas Mirtill, György deákot Kucséber Ervin személyesítette meg. A kísérő zenét Erdélyi-Molnár Klára és a Liszt Ferenc Zeneművészeti Egyetem népzenei tanszékének hallgatói biztosították.
 

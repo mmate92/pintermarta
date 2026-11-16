@@ -35,7 +35,7 @@ A teljes kötet itt olvasható: [Letölthető dokumentum](/letoltesek/online-ful
 
 ![](../../assets/kepek/hirek/hirek-04.jpg)
 
-2026. május 27-én vettük át a Klaniczay- díjat Demeter Júliával az MTA szegedi székházában. Az erről szóló hírt és a laudációt lásd az alábbi linkeken.
+2026\. május 27-én vettük át a Klaniczay- díjat Demeter Júliával az MTA szegedi székházában. Az erről szóló hírt és a laudációt lásd az alábbi linkeken.
 
 - <https://hungarologia.net/atadtak-a-2026-os-klaniczay-dijat/>
 - <https://uni-eszterhazy.hu/egyetem/klaniczay-dijat-kapott-dr-pinter-marta-zsuzsanna-a-btk-egyetemi-tanara>
@@ -257,7 +257,7 @@ Könyvbemutató meghívója, Budapest, MTA Könyvtár és Információs Központ
 
 ### Előadás a nagyváradi Partiumi Keresztény Egyetem konferenciáján
 
-2023. szeptember 22. Előadás a nagyváradi Partiumi Keresztény Egyetem *Az irodalom és a kultúra éltető közege: a lokális és a regionális* című nemzetközi konferenciáján.
+2023\. szeptember 22. Előadás a nagyváradi Partiumi Keresztény Egyetem *Az irodalom és a kultúra éltető közege: a lokális és a regionális* című nemzetközi konferenciáján.
 
 **Előadásom címe:** *Pyrker János László egri érsek és a patriotizmus modelljei*
 
@@ -352,7 +352,7 @@ az *Új eredmények a színház és drámatörténeti kutatásban (17-19. száza
 
 ### Előadást tartottam a Semiotica Agriensis 21. (Színházszemiotika) konferencián
 
-2022. március 30-án. **Előadásom címe:** *Gárdonyi színjátékai*
+2022\. március 30-án. **Előadásom címe:** *Gárdonyi színjátékai*
 
 ![](../../assets/kepek/hirek/hirek-45.jpg)
 
@@ -404,7 +404,7 @@ A BÖSZK színielőadása a XI. egri drámatörténeti konferencián
 
 ![](../../assets/kepek/hirek/hirek-49.jpg)
 
-2022. március 29-én nagy sikerrel zajlott le a Ferences iskoladrámák 2. és 3. kötetének a bemutatója. Az eseményről az alábbi linken fényképes beszámoló és videó is olvasható:
+2022\. március 29-én nagy sikerrel zajlott le a Ferences iskoladrámák 2. és 3. kötetének a bemutatója. Az eseményről az alábbi linken fényképes beszámoló és videó is olvasható:
 
 - <https://zti.hu/index.php/hu/hirek-esemenyek/114-2022/966-megjelent-a-18-szazadi-csiksomlyoi-passiojatekok-kritikai-kozreadasanak-soron-kovetkezo-ket-kotete-1740-1762>
 - <https://www.youtube.com/watch?v=Qe95cOT87Wc&ab_channel=BTKZenetudom%C3%A1nyiInt%C3%A9zet>

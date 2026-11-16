@@ -9,7 +9,7 @@ export const site = {
   contact: {
     institution: 'Eszterházy Károly Katolikus Egyetem, Irodalomtudományi Tanszék',
     address: 'Eger, Eszterházy tér 1., A épület, 305. szoba',
-    phone: '+36 36 520400/2064',
+    phone: '+36 520400/2064',
     email: 'pinter.marta@uni-eszterhazy.hu',
   },
 };

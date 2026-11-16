@@ -35,11 +35,11 @@ title: "Tudományos önéletrajz"
 - 1988 – 1996 MTA Irodalomtudományi Intézet, tudományos munkatárs
 - 1990 – 1998 óraadó tanár, illetve félállású egyetemi docens az ELTE TFK, a Miskolci Egyetem és a Károli Gáspár Református Egyetem magyar irodalmi tanszékein
 - 1996 – 2012 Veszprémi (2000-től Pannon) Egyetem, Modern Filológiai és Társadalomtudományi Kar, Színháztudományi Tanszék, egyetemi docens
-- 2000. január 1. – 2012. július 31. Pannon Egyetem MFTK, Színháztudományi Tanszék vezetője,
-- 2012. augusztus 1. Eszterházy Károly Tanárképző Főiskola, Irodalomtudományi Tanszék, egyetemi docens
-- 2016. július 1. Eszterházy Károly Egyetem, Irodalomtudományi Tanszék, tanszékvezető egyetemi docens
-- 2017. július 1. – Eszterházy Károly Egyetem, Bölcsészettudományi Kar (2018– Bölcsészettudományi és Művészeti Kar), dékán
-- 2018. szeptember 1. egyetemi tanár
+- 2000\. január 1. – 2012. július 31. Pannon Egyetem MFTK, Színháztudományi Tanszék vezetője,
+- 2012\. augusztus 1. Eszterházy Károly Tanárképző Főiskola, Irodalomtudományi Tanszék, egyetemi docens
+- 2016\. július 1. Eszterházy Károly Egyetem, Irodalomtudományi Tanszék, tanszékvezető egyetemi docens
+- 2017\. július 1. – Eszterházy Károly Egyetem, Bölcsészettudományi Kar (2018– Bölcsészettudományi és Művészeti Kar), dékán
+- 2018\. szeptember 1. egyetemi tanár
 
 ## Tudományos/ szakmai közéleti tevékenység
 

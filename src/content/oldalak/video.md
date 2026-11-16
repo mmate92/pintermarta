@@ -19,7 +19,7 @@ title: "Videófelvételek"
 
 ### Beszámoló a Régi Magyar Drámai Emlékeke sorozatának lezárásáról
 
-2025. november 18. Líceum kiadó
+2025\. november 18. Líceum kiadó
 
 <https://www.facebook.com/reel/1163127182089981>
 
