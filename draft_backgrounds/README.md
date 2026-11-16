@@ -10,6 +10,7 @@ The three background sketches from the first draft of the site, kept so we can g
 | `make-backgrounds.mjs` | Script that generated all four (`node draft_backgrounds/make-backgrounds.mjs` writes to `draft_backgrounds/generated/`) |
 | `themes.css` | The CSS of the three themes and of the sketch switcher |
 | `ThemeSwitcher.astro` | The bottom-right switcher component |
+| `ThemeSwitcher-szinek.astro` | The later selector with plain colour backgrounds (bordó, gesztenye, szilva…); its CSS is in git commit `131f6f8` |
 
 The complete first draft (with the working switcher) is also in git: commit `641ba0e`.
 `git checkout 641ba0e -- src/styles/global.css src/layouts/Base.astro src/components` restores it.
