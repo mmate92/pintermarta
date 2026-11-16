@@ -2,7 +2,7 @@
 import { getEntry, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import { site, awards } from '../data/site';
+import { site } from '../data/site';
 import portrait from '../assets/portre.jpg';
 
 // The news shown on the home page is src/content/oldalak/hirek.md
@@ -19,7 +19,6 @@ const { Content } = await render(news!);
         <dt>Iroda</dt><dd>{site.contact.address}</dd>
         <dt>Telefon</dt><dd>{site.contact.phone}</dd>
         <dt>E-mail</dt><dd><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></dd>
-        <dt>Díjak</dt><dd><a href={awards.href} rel="noopener">{awards.label}</a></dd>
       </dl>
     </div>
   </section>

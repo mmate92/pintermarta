@@ -352,7 +352,7 @@ a:hover { color: var(--red-dark); text-decoration-thickness: 2px; }
 .footer p { margin: 0.2rem 0; opacity: 0.85; }
 
 /* ------------------------------------------------------------------
-   Theatre scene: side curtains (fixed), top drape and stage boards.
+   Theatre scene: side curtains (fixed) and top drape.
    Other background drafts (and the script that drew these curtains) are
    kept in draft_backgrounds/.
    ------------------------------------------------------------------ */
@@ -361,7 +361,6 @@ a:hover { color: var(--red-dark); text-decoration-thickness: 2px; }
 .scene .curtain { top: 0; bottom: 0; width: var(--curtain); background: url('../assets/hatter/fuggony-oldal.svg') no-repeat 0 0 / clamp(15vh, var(--curtain), 34vh) 100%; filter: drop-shadow(10px 0 16px rgb(0 0 0 / 0.55)); }
 .scene .curtain.left { left: 0; }
 .scene .curtain.right { right: 0; transform: scaleX(-1); }
-.scene .boards { left: 0; right: 0; bottom: 0; height: 16vh; background: repeating-linear-gradient(90deg, #4a2814 0 5.5rem, #3a1e0e 5.5rem 5.6rem, #55301a 5.6rem 11rem, #331a0c 11rem 11.1rem); mask-image: linear-gradient(transparent, #000 70%); -webkit-mask-image: linear-gradient(transparent, #000 70%); opacity: 0.8; }
 .valance { position: absolute; z-index: -1; top: 0; left: 0; right: 0; height: var(--valance); background: url('../assets/hatter/fuggony-felso.svg') repeat-x center top / auto 100%; filter: drop-shadow(0 8px 12px rgb(0 0 0 / 0.6)); }
 
 @media print { .scene, .valance, .navbar { display: none; } }

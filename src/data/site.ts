@@ -15,7 +15,7 @@ export const site = {
 };
 
 // Shown in the hero of the home page.
-// TODO: replace this link with a proper list of awards (what and when).
+// Not shown at the moment (removed from the home page hero). TODO: a proper list of awards (what and when).
 export const awards = {
   label: 'Díjak, elismerések',
   href: 'http://iti.btk.mta.hu/hu/intezet/dijak-elismeresek',
